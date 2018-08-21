@@ -2,5 +2,5 @@
 ## Usage:
 python3 gscrap.py "search term" images_qty
 
-##Example:
+# Example:
 python3 gscrap.py "cats" 100000
