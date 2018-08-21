@@ -14,16 +14,17 @@ browser.get(url)
 #header={'User-Agent':"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"}
 counter = 0
 succounter = 0
-
+print("Google Images Scrapper v1.1 - by Bastian Muhlhauser\n[#] Creando carpeta ", searchterm)
 if not os.path.exists(searchterm):
     os.mkdir(searchterm)
 
+print("[#] Cargando imagenes")
 for _ in range(500):
     browser.execute_script("window.scrollBy(0,10000)")
 
 browser.find_element_by_id('smb').click()
 
-for _ in range(500):
+for _ in range(int(argv[2])):
     browser.execute_script("window.scrollBy(0,10000)")
 for x in browser.find_elements_by_xpath('//div[contains(@class,"rg_meta")]'):
     counter = counter + 1
