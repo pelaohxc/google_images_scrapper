@@ -21,6 +21,10 @@ if not os.path.exists(searchterm):
 for _ in range(500):
     browser.execute_script("window.scrollBy(0,10000)")
 
+browser.find_element_by_id('smb').click()
+
+for _ in range(500):
+    browser.execute_script("window.scrollBy(0,10000)")
 for x in browser.find_elements_by_xpath('//div[contains(@class,"rg_meta")]'):
     counter = counter + 1
     print("Imagenes Totales:", counter)
@@ -39,5 +43,4 @@ for x in browser.find_elements_by_xpath('//div[contains(@class,"rg_meta")]'):
     except:
             print("No se pudo descargar la imagen")
 
-print(succounter, "imagenes descargadas")
 browser.close()
