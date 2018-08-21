@@ -6,7 +6,7 @@ from sys import argv
 
 searchterm = argv[1] # tambien sera el nombre de la carpeta
 url = "https://www.google.co.in/search?q="+searchterm+"&source=lnms&tbm=isch"
-browser = webdriver.Chrome('C:/Users/Bastian Mühlhauser/Downloads/chromedriver_win32/chromedriver.exe')
+browser = webdriver.Chrome('url de webdriver')
 browser.get(url)
 #header={'User-Agent':"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"}
 counter = 0
